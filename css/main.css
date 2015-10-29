@@ -1,0 +1,54 @@
+html{
+	font-family: "Segoe ui", sans-serif;
+}
+
+table {
+  overflow: hidden;
+  border-collapse: collapse;
+  border: 2px solid #000;
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
+  width: 80%;
+  max-width: 1500px;
+  min-width: 600px;
+  outline: 1px;
+}
+
+td, th {
+  padding: 10px;
+  position: relative;
+  outline: 0;
+}
+
+body:not(.nohover) tbody tr:hover {
+  background-color: teal;
+}
+
+td:hover::after,
+thead th:not(:empty):hover::after,
+td:focus::after,
+thead th:not(:empty):focus::after { 
+  content: '';
+  height: 10000px;
+  left: 0;
+  position: absolute;  
+  top: -5000px;
+  width: 100%;
+  z-index: -1;
+}
+
+td:hover::after,
+th:hover::after {
+  background-color: teal;
+}
+
+td:focus::after,
+th:focus::after {
+  background-color: lightblue;
+}
+
+caption{
+	background-color: #fff;
+	font-size: 2rem;
+}
+
